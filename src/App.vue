@@ -1,8 +1,10 @@
 <template>
-  <el-container>
-    <el-header height="55px"><navbar /></el-header>
-    <el-main><router-view /></el-main>
-  </el-container>
+  <div class="container">
+    <el-container>
+      <el-header style="padding: 0"><navbar /></el-header>
+      <el-main><router-view /></el-main>
+    </el-container>
+  </div>
 </template>
 <script setup>
 import Navbar from './components/Navbar'
@@ -17,14 +19,26 @@ import { ElContainer, ElHeader, ElMain } from 'element-plus'
     sans-serif;
 }
 ::-webkit-scrollbar {
-  width: 3px;
-  height: 3px;
+  width: 0.1875rem;
+  height: 0.1875rem;
   position: absolute;
 }
 ::-webkit-scrollbar-thumb {
   background: #92c4da;
 }
 ::-webkit-scrollbar-track {
-  background: #42839f;
+  background: #5998b2;
+}
+.container {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+:root:not([data-theme='dark']) {
+  --bg-color: #fff;
+  --text-color: #333;
+}
+:root[data-theme='dark'] {
+  --bg-color: #333;
+  --text-color: #fff;
 }
 </style>

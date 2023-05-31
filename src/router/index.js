@@ -5,6 +5,7 @@ import Individual from '@/views/Individual'
 import AINavigation from '@/views/frontendNavigation/AINavigation'
 import VueNavigation from '@/views/frontendNavigation/VueNavigation'
 import nProgress from 'nprogress'
+import 'nprogress/nprogress.css'
 
 const routes = [
   {
