@@ -1,6 +1,5 @@
 ---
 layout: home
-layoutClass: 'home-layout'
 
 hero:
   name: '雨过天晴'
@@ -11,34 +10,25 @@ hero:
     alt: cute aniya
   actions:
     - theme: brand
-      text: 导航一
-      link: /navigation/navigation-1
+      text: 前端导航
+      link: /nav
     - theme: alt
-      text: 导航二
+      text: 前端童话
       link: /navigation/navigation-2
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - icon: 📖
+    title: 前端物语
+    details: 整理前端常用知识点<small>（面试八股文）</small><br />如有异议按你的理解为主，不接受反驳
+    link: /fe/javascript/types
+    linkText: 前端常用知识
+  - icon: 📘
+    title: 源码阅读
+    details: 了解各种库的实现原理<br />学习其中的小技巧和冷知识
+    link: /analysis/utils/only-allow
+    linkText: 源码阅读
+  - icon: 💯
+    title: 吾志所向，一往无前。
+    details: '<small class="bottom-small">一个想躺平的小开发</small>'
+    link: https://fe-mm.com
 ---
-
-<style>
-.home-layout .image-src:hover {
-  transform: translate(-50%, -50%) rotate(666turn);
-  transition: transform 59s 1s cubic-bezier(0.3, 0, 0.8, 1);
-}
-
-.home-layout .details small {
-  opacity: 0.8;
-}
-
-.home-layout .bottom-small {
-  display: block;
-  margin-top: 2em;
-  text-align: right;
-}
-</style>
