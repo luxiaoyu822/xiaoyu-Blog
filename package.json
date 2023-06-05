@@ -11,6 +11,10 @@
   "author": "luxiaoyu",
   "license": "MIT",
   "devDependencies": {
-    "vitepress": "^1.0.0-beta.1"
+    "@mdit-vue/shared": "^0.12.0",
+    "@types/node": "^20.2.5",
+    "sass": "^1.62.1",
+    "vitepress": "^1.0.0-beta.1",
+    "vue": "^3.3.4"
   }
 }

@@ -1,16 +1,21 @@
-// https://vitepress.dev/guide/custom-theme
 import { h } from 'vue'
+import { useData } from 'vitepress'
 import Theme from 'vitepress/theme'
-import './style.css'
+import './style.scss'
 
 export default {
   ...Theme,
   Layout: () => {
-    return h(Theme.Layout, null, {
-      // https://vitepress.dev/guide/extending-default-theme#layout-slots
-    })
+    const props: Record<string, any> = {}
+    const { frontmatter } = useData()
+
+    // 添加自定义样式选择
+    if (frontmatter.value?.layoutClass) {
+      props.class = frontmatter.value.layoutClass
+    }
+    return h(Theme.Layout, props, {})
   },
   enhanceApp({ app, router, siteData }) {
     // ...
-  }
+  },
 }

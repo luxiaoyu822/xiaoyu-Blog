@@ -6,15 +6,16 @@ export default defineConfig({
   titleTemplate: ':title - xiaoyu',
   description: '代码与雨都会带来变化',
   cleanUrls: true,
+  head: [['link', { rel: 'icon', href: '/favicon.ico' }]],
   themeConfig: {
     logo: '/logo.png',
     search: {
       provider: 'local',
     },
     nav: [
-      { text: '导航', link: '/' },
+      { text: '导航', link: '/nav' },
       {
-        text: '前端物语',
+        text: '前端童话',
         items: [
           { text: 'ai导航', link: '/navigation/navigation-1' },
           { text: 'vue导航', link: '/navigation/navigation-2' },
