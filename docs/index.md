@@ -1,5 +1,6 @@
 ---
 layout: home
+layoutClass: 'home-layout'
 
 hero:
   name: '雨过天晴'
@@ -24,3 +25,20 @@ features:
   - title: Feature C
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
 ---
+
+<style>
+.home-layout .image-src:hover {
+  transform: translate(-50%, -50%) rotate(666turn);
+  transition: transform 59s 1s cubic-bezier(0.3, 0, 0.8, 1);
+}
+
+.home-layout .details small {
+  opacity: 0.8;
+}
+
+.home-layout .bottom-small {
+  display: block;
+  margin-top: 2em;
+  text-align: right;
+}
+</style>
