@@ -37,6 +37,23 @@ const NavData: Array<navLinks> = [
     ],
   },
   {
+    title: '免费 ChatGPT 镜像站点',
+    item: [
+      {
+        icon: '/icons/mianfeigpt.svg',
+        title: 'GPT 镜像对话工具',
+        desc: '基于 GPT-3.5,使用稳定',
+        link: 'https://chat2.jinshutuan.com/#/chat/1686016257098',
+      },
+      {
+        icon: '/icons/mianfeigpt.svg',
+        title: 'GPT 镜像对话工具',
+        desc: '	免费AI绘画/GPT-3.5；付费GPT-4',
+        link: 'https://ai.x-code.fun/web/',
+      },
+    ],
+  },
+  {
     title: 'Vue 生态',
     item: [
       {
@@ -133,6 +150,12 @@ const NavData: Array<navLinks> = [
         desc: '一个使用 Vue.js 开发所有前端应用的框架',
         link: 'https://uniapp.dcloud.net.cn',
       },
+      {
+        icon: 'https://open.weixin.qq.com/favicon.ico',
+        title: '微信开放平台',
+        desc: '让你的程序接入微信',
+        link: 'https://open.weixin.qq.com/',
+      },
     ],
   },
   {
@@ -180,16 +203,10 @@ const NavData: Array<navLinks> = [
         link: 'https://echarts.apache.org/zh/index.html',
       },
       {
-        icon: 'https://antv.vision/icons/icon-72x72.png',
+        icon: './icons/antv.png',
         title: 'AntV',
         desc: '蚂蚁集团全新一代数据可视化解决方案，致力于提供一套简单方便、专业可靠、无限可能的数据可视化最佳实践。',
         link: 'https://antv.vision/zh/',
-      },
-      {
-        icon: 'https://d3js.org/favicon.png',
-        title: 'D3.js',
-        desc: '一个遵循 Web 标准用于可视化数据的 JavaScript 库',
-        link: 'https://d3js.org',
       },
       {
         icon: 'https://www.chartjs.org/favicon.ico',
@@ -199,9 +216,8 @@ const NavData: Array<navLinks> = [
       },
       {
         icon: 'https://threejs.org/files/favicon.ico',
-        // icon: 'https://threejs.org/files/favicon_white.ico',
         title: 'Three.js',
-        desc: 'JavaScript 3d 库',
+        desc: 'JavaScript 3D 库',
         link: 'https://threejs.org',
       },
     ],
@@ -304,10 +320,10 @@ const NavData: Array<navLinks> = [
         link: 'https://iconpark.oceanengine.com/official',
       },
       {
-        icon: 'https://emoji.muan.co/appicon.png',
-        title: 'Emoji searcher',
-        desc: 'Emoji 表情大全',
-        link: '',
+        icon: 'https://fontawesome.com/favicon.ico',
+        title: 'fontawesome 图标库',
+        desc: 'FontAwesome 是互联网的图标库和工具包，被数以百万计的设计师、开发人员和内容创作者使用。',
+        link: 'https://fontawesome.com/',
       },
     ],
   },
@@ -327,10 +343,10 @@ const NavData: Array<navLinks> = [
         link: 'https://www.runoob.com',
       },
       {
-        icon: '/icons/es6.svg',
-        title: 'ES6 入门教程',
-        desc: '阮一峰的网络日志',
-        link: 'http://es6.ruanyifeng.com',
+        icon: 'https://www.w3school.com.cn/ui2019/logo-16-red.png',
+        title: 'W3School',
+        desc: '领先的 Web 技术教程',
+        link: 'https://www.w3school.com.cn/',
       },
     ],
   },
@@ -369,10 +385,32 @@ const NavData: Array<navLinks> = [
       },
       {
         title: '博客园',
-        // icon: 'https://common.cnblogs.com/favicon.ico',
         icon: '/icons/cnblogs.svg',
         desc: '博客园是一个面向开发者的知识分享社区',
         link: 'https://www.cnblogs.com',
+      },
+    ],
+  },
+  {
+    title: '摸鱼神器',
+    item: [
+      {
+        icon: 'https://momoyu.cc/icon-192.png',
+        title: '摸摸鱼热榜',
+        desc: '网站热榜聚合',
+        link: 'https://momoyu.cc',
+      },
+      {
+        icon: 'https://static.hdslb.com/mobile/img/512.png',
+        title: '哔哩哔哩',
+        desc: '流行的二次元弹幕网',
+        link: 'https://www.bilibili.com',
+      },
+      {
+        icon: 'https://www.youtube.com/s/desktop/014dbbed/img/favicon_48x48.png',
+        title: 'YouTube',
+        desc: '全球最大的视频分享平台',
+        link: 'https://www.youtube.com',
       },
       {
         title: '知乎',
@@ -380,46 +418,11 @@ const NavData: Array<navLinks> = [
         desc: '中文互联网高质量的问答社区和创作者聚集的原创内容平台',
         link: 'https://juejin.cn',
       },
-    ],
-  },
-  {
-    title: '摸鱼专用',
-    item: [
       {
-        icon: 'https://momoyu.cc/icon-192.png',
-        title: '摸摸鱼热榜',
-        // desc: '聚合每日热门、搞笑、有趣、适合摸鱼的资讯',
-        link: 'https://momoyu.cc',
-      },
-      {
-        icon: 'https://v.qq.com/favicon.ico',
-        title: '腾讯视频',
-        // desc: '中国领先的在线视频媒体平台，海量高清视频在线观看',
-        link: 'https://v.qq.com',
-      },
-      {
-        icon: 'https://static.hdslb.com/mobile/img/512.png',
-        title: '哔哩哔哩',
-        // desc: '',
-        link: 'https://www.bilibili.com',
-      },
-      {
-        icon: 'https://www.youtube.com/s/desktop/014dbbed/img/favicon_48x48.png',
-        title: 'YouTube',
-        // desc: '',
-        link: 'https://www.youtube.com',
-      },
-      {
-        icon: '/icons/twitter.svg',
-        title: 'Twitter',
-        // desc: '',
-        link: 'https://twitter.com',
-      },
-      {
-        icon: '/icons/pixiv.png',
-        title: 'Pixiv',
-        // desc: '',
-        link: 'https://www.pixiv.net',
+        title: '我不是盐神',
+        icon: 'https://onehu.xyz/img/fluid.png',
+        desc: '一个有趣的小说网',
+        link: 'https://onehu.xyz/',
       },
     ],
   },

@@ -17,21 +17,65 @@ export default defineConfig({
       {
         text: '前端童话',
         items: [
-          { text: 'ai导航', link: '/navigation/navigation-1' },
-          { text: 'vue导航', link: '/navigation/navigation-2' },
+          { text: 'HTML 基础知识', link: '/f-knowledges/html/started' },
+          { text: 'CSS 基础知识', link: '/f-knowledges/css/started' },
+          {
+            text: 'JavaScript 基础知识',
+            link: '/f-knowledges/javascript/started',
+          },
+          {
+            text: '网络知识',
+            link: '/f-knowledges/network/base',
+          },
+          {
+            text: 'ECMAScript 新增',
+            link: '/f-knowledges/ecma/es6',
+          },
+          // { text: 'Nodejs 基础知识', link: '/f-knowledges/nodejs' },
+          // { text: 'Vuejs 基础知识', link: '/f-knowledges/vue' },
         ],
+        activeMatch: '^/f-knowledges',
       },
       { text: '笔记', link: '/notes' },
       { text: "xiaoyu's", link: '/individual' },
     ],
     sidebar: {
-      '/navigation/': [
+      '/f-knowledges/': [
         {
+          text: 'HTML 基础知识',
+          collapsed: true,
+          items: [{ text: 'HTML 入门', link: '/f-knowledges/html/started' }],
+        },
+        {
+          text: 'CSS 基础知识',
+          collapsed: true,
+          items: [{ text: 'CSS 入门', link: '/f-knowledges/css/started' }],
+        },
+        {
+          text: 'JavaScript 基础知识',
+          collapsed: true,
           items: [
-            { text: 'ai导航', link: '/navigation/navigation-1' },
-            { text: 'vue导航', link: '/navigation/navigation-2' },
+            {
+              text: 'JavaScript 入门',
+              link: '/f-knowledges/javascript/started',
+            },
           ],
         },
+        {
+          text: 'ECMAScript 新增',
+          collapsed: true,
+          items: [{ text: 'ES6 新增', link: '/f-knowledges/ecma/es6' }],
+        },
+        {
+          text: '网络知识',
+          collapsed: true,
+          items: [
+            { text: '基础知识', link: '/f-knowledges/network/base' },
+            { text: 'HTTP 知识', link: '/f-knowledges/network/http' },
+          ],
+        },
+        // { text: 'Nodejs 基础知识', link: '/f-knowledges/nodejs' },
+        // { text: 'Vuejs 基础知识', link: '/f-knowledges/vue' },
       ],
     },
     socialLinks: [{ icon: 'github', link: 'https://github.com/luxiaoyu822' }],
