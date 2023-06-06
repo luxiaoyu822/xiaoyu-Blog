@@ -1,5 +1,6 @@
 ---
 layoutClass: nav-layout
+lastUpdated: false
 ---
 
 <script setup>
