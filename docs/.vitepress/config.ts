@@ -7,6 +7,7 @@ export default defineConfig({
   description: '代码与雨都会带来变化',
   cleanUrls: true,
   head: [['link', { rel: 'icon', href: '/favicon.ico' }]],
+  lastUpdated: true,
   themeConfig: {
     logo: '/logo.png',
     search: {
