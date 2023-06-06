@@ -240,3 +240,5 @@ href 这个名字可能开始看起来有点令人费解，代表超文本引用
 :::
 
 现在就为页面添加一个链接吧。
+
+[转载，文章来自于MDN Web Docs](https://developer.mozilla.org/zh-CN/docs/Learn/Getting_started_with_the_web/HTML_basics) 
