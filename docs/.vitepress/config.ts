@@ -25,13 +25,14 @@ export default defineConfig({
             link: '/f-knowledges/javascript/started',
           },
           {
-            text: '网络知识',
-            link: '/f-knowledges/network/base',
-          },
-          {
             text: 'ECMAScript 新增',
             link: '/f-knowledges/ecma/es6',
           },
+          {
+            text: '网络知识',
+            link: '/f-knowledges/network/base',
+          },
+
           // { text: 'Nodejs 基础知识', link: '/f-knowledges/nodejs' },
           // { text: 'Vuejs 基础知识', link: '/f-knowledges/vue' },
         ],
