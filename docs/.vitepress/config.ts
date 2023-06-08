@@ -25,7 +25,7 @@ export default defineConfig({
             link: '/f-knowledges/javascript/started',
           },
           {
-            text: 'ECMAScript 新增',
+            text: 'ECMAScript 语法',
             link: '/f-knowledges/ecma/es6',
           },
           {
@@ -64,9 +64,9 @@ export default defineConfig({
           ],
         },
         {
-          text: 'ECMAScript 新增',
+          text: 'ECMAScript 语法',
           collapsed: true,
-          items: [{ text: 'ES6 新增', link: '/f-knowledges/ecma/es6' }],
+          items: [{ text: 'ES6 部分摘要', link: '/f-knowledges/ecma/es6' }],
         },
         {
           text: '网络知识',
