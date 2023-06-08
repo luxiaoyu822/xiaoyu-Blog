@@ -404,7 +404,6 @@ pro
 ```
 ```js
 // promise.all 参数为promise对象组成的数组 等待参数的promise全部为reslove后执行
-// 返回结果为参数的promise的结果的
 Promise.all([pro,pro1,pro2]).then(res=>{
   console.log(res);
 }).catch(err=>{

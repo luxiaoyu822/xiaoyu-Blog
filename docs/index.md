@@ -14,21 +14,21 @@ hero:
       link: /nav
     - theme: alt
       text: 前端童话
-      link: /navigation/navigation-2
+      link: /f-knowledges/ecma/es6
 
 features:
-  - icon: 📖
-    title: 前端物语
-    details: 整理前端常用知识点<small>（面试八股文）</small><br />如有异议按你的理解为主，不接受反驳
-    link: /fe/javascript/types
-    linkText: 前端常用知识
+  - icon: ⭐
+    title: 前端童话
+    details: 前端常用知识分享 + 记录<br />待补充中:-* ...<br />如有异议，请以官方文档为准
+    link: /f-knowledges/network/base
+    linkText: 前端童话
   - icon: 📘
-    title: 源码阅读
-    details: 了解各种库的实现原理<br />学习其中的小技巧和冷知识
+    title: 笔记心得
+    details: 记录学习过程中的笔记<br />随心记 😄
     link: /analysis/utils/only-allow
     linkText: 源码阅读
-  - icon: 💯
-    title: 吾志所向，一往无前。
-    details: '<small class="bottom-small">一个想躺平的小开发</small>'
-    link: https://fe-mm.com
+  - icon: 💬
+    title: 不能说的秘密
+    details: '生命在于不断学习，成长的路上，不断前进。'
+    link: 
 ---
