@@ -41,7 +41,7 @@ export default defineConfig({
         text: '笔记心得',
         items: [
           { text: '常用命令', link: '/notes/command' },
-          { text: '随心记', link:'/notes/raop'}
+          { text: '随心记', link:'/notes/raop/test'}
         ],
         activeMatch: '^/notes',
       },
@@ -94,7 +94,7 @@ export default defineConfig({
           text:'随心记',
           collapsed:true,
           items:[
-            { text:''}
+            { text:'测试1',link:'/notes/raop/test'}
           ]
         }
       ]

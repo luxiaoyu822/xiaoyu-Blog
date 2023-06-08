@@ -1,4 +1,5 @@
 ---
-layout: page
+layout: doc
+lastUpdated: false
 ---
 individual
