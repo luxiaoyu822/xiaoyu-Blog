@@ -29,16 +29,22 @@ export default defineConfig({
             link: '/f-knowledges/ecma/es6',
           },
           {
-            text: '网络知识',
+            text: 'Web开发知识',
             link: '/f-knowledges/network/base',
           },
-
           // { text: 'Nodejs 基础知识', link: '/f-knowledges/nodejs' },
           // { text: 'Vuejs 基础知识', link: '/f-knowledges/vue' },
         ],
         activeMatch: '^/f-knowledges',
       },
-      { text: '笔记', link: '/notes' },
+      {
+        text: '笔记心得',
+        items: [
+          { text: '常用命令', link: '/notes/command' },
+          { text: '随心记', link:'/notes/raop'}
+        ],
+        activeMatch: '^/notes',
+      },
       { text: "xiaoyu's", link: '/individual' },
     ],
     sidebar: {
@@ -69,16 +75,29 @@ export default defineConfig({
           items: [{ text: 'ES6 部分摘要', link: '/f-knowledges/ecma/es6' }],
         },
         {
-          text: '网络知识',
+          text: 'Web开发知识',
           collapsed: true,
           items: [
-            { text: '基础知识', link: '/f-knowledges/network/base' },
-            { text: 'HTTP 知识', link: '/f-knowledges/network/http' },
+            { text: '互联网起步', link: '/f-knowledges/network/base' },
+            { text: 'HTTP 概述', link: '/f-knowledges/network/http' },
           ],
         },
         // { text: 'Nodejs 基础知识', link: '/f-knowledges/nodejs' },
         // { text: 'Vuejs 基础知识', link: '/f-knowledges/vue' },
       ],
+      '/notes/':[
+        {
+          text:'常用命令',
+          link:'/notes/command'
+        },
+        {
+          text:'随心记',
+          collapsed:true,
+          items:[
+            { text:''}
+          ]
+        }
+      ]
     },
     socialLinks: [{ icon: 'github', link: 'https://github.com/luxiaoyu822' }],
     footer: {
