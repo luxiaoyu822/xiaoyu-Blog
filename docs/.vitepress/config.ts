@@ -94,7 +94,7 @@ export default defineConfig({
           text:'随心记',
           collapsed:true,
           items:[
-            { text:'测试1',link:'/notes/raop/myw'}
+            { text:'搭建个人网站',link:'/notes/raop/myw'}
           ]
         }
       ]
