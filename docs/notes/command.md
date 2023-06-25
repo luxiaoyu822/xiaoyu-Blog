@@ -26,6 +26,8 @@
 
 - `git stash` 将文件添加到暂存区
 
+- `git stash apply` 取回暂存区的的文件
+
 - `git log` 查看提交日志信息
 
 - `git status` 查看当前分支的状态
