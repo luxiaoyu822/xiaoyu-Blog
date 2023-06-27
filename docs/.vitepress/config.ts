@@ -18,24 +18,22 @@ export default defineConfig({
       {
         text: '前端童话',
         items: [
-          { text: 'HTML 基础知识', link: '/f-knowledges/html/started' },
-          { text: 'CSS 基础知识', link: '/f-knowledges/css/started' },
+          { text: 'HTML 基础知识', link: '/f-knowledge/html/started' },
+          { text: 'CSS 基础知识', link: '/f-knowledge/css/started' },
           {
             text: 'JavaScript 基础知识',
-            link: '/f-knowledges/javascript/started',
+            link: '/f-knowledge/javascript/started',
           },
           {
             text: 'ECMAScript 语法',
-            link: '/f-knowledges/ecma/es6',
+            link: '/f-knowledge/ecma/es6',
           },
           {
             text: 'Web开发知识',
-            link: '/f-knowledges/network/base',
+            link: '/f-knowledge/network/base',
           },
-          // { text: 'Nodejs 基础知识', link: '/f-knowledges/nodejs' },
-          // { text: 'Vuejs 基础知识', link: '/f-knowledges/vue' },
         ],
-        activeMatch: '^/f-knowledges',
+        activeMatch: '^/f-knowledge',
       },
       {
         text: '笔记心得',
@@ -48,16 +46,16 @@ export default defineConfig({
       { text: "xiaoyu's", link: '/individual' },
     ],
     sidebar: {
-      '/f-knowledges/': [
+      '/f-knowledge/': [
         {
           text: 'HTML 基础知识',
           collapsed: true,
-          items: [{ text: 'HTML 入门', link: '/f-knowledges/html/started' }],
+          items: [{ text: 'HTML 入门', link: '/f-knowledge/html/started' }],
         },
         {
           text: 'CSS 基础知识',
           collapsed: true,
-          items: [{ text: 'CSS 入门', link: '/f-knowledges/css/started' }],
+          items: [{ text: 'CSS 入门', link: '/f-knowledge/css/started' }],
         },
         {
           text: 'JavaScript 基础知识',
@@ -65,25 +63,23 @@ export default defineConfig({
           items: [
             {
               text: 'JavaScript 入门',
-              link: '/f-knowledges/javascript/started',
+              link: '/f-knowledge/javascript/started',
             },
           ],
         },
         {
           text: 'ECMAScript 语法',
           collapsed: true,
-          items: [{ text: 'ES6 部分摘要', link: '/f-knowledges/ecma/es6' }],
+          items: [{ text: 'ES6 部分摘要', link: '/f-knowledge/ecma/es6' }],
         },
         {
           text: 'Web开发知识',
           collapsed: true,
           items: [
-            { text: '互联网起步', link: '/f-knowledges/network/base' },
-            { text: 'HTTP 概述', link: '/f-knowledges/network/http' },
+            { text: '互联网起步', link: '/f-knowledge/network/base' },
+            { text: 'HTTP 概述', link: '/f-knowledge/network/http' },
           ],
         },
-        // { text: 'Nodejs 基础知识', link: '/f-knowledges/nodejs' },
-        // { text: 'Vuejs 基础知识', link: '/f-knowledges/vue' },
       ],
       '/notes/':[
         {
@@ -94,7 +90,7 @@ export default defineConfig({
           text:'随心记',
           collapsed:true,
           items:[
-            { text:'搭建个人网站',link:'/notes/raop/myw'}
+            { text:'搭建个人网站',link:"/notes/raop/myw"}
           ]
         }
       ]
