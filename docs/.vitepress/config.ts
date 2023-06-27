@@ -18,10 +18,10 @@ export default defineConfig({
       {
         text: '前端童话',
         items: [
-          { text: 'HTML 基础知识', link: '/f-knowledge/html/started' },
-          { text: 'CSS 基础知识', link: '/f-knowledge/css/started' },
+          { text: 'HTML 相关知识', link: '/f-knowledge/html/started' },
+          { text: 'CSS 相关知识', link: '/f-knowledge/css/started' },
           {
-            text: 'JavaScript 基础知识',
+            text: 'JavaScript 相关知识',
             link: '/f-knowledge/javascript/started',
           },
           {
@@ -48,17 +48,17 @@ export default defineConfig({
     sidebar: {
       '/f-knowledge/': [
         {
-          text: 'HTML 基础知识',
+          text: 'HTML 相关知识',
           collapsed: true,
           items: [{ text: 'HTML 入门', link: '/f-knowledge/html/started' }],
         },
         {
-          text: 'CSS 基础知识',
+          text: 'CSS 相关知识',
           collapsed: true,
           items: [{ text: 'CSS 入门', link: '/f-knowledge/css/started' }],
         },
         {
-          text: 'JavaScript 基础知识',
+          text: 'JavaScript 相关知识',
           collapsed: true,
           items: [
             {
@@ -100,5 +100,12 @@ export default defineConfig({
       message: 'Released under the MIT License.',
       copyright: 'Copyright © 2023-present luxiaoyu',
     },
+    lastUpdatedText: '上次更新',
+    darkModeSwitchLabel:'外观主题',
+    returnToTopLabel:'返回顶部',
+    docFooter: {
+      prev: '上一篇',
+      next: '下一篇'
+    }
   },
 })

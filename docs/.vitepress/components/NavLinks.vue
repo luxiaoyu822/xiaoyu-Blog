@@ -8,7 +8,6 @@
             <img
               :src="withBase(icon)"
               :alt="title"
-              onerror="this.parentElement.style.display='none'"
             />
           </div>
         </template>
