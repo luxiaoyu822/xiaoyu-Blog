@@ -116,7 +116,7 @@ const NavData: Array<navLinks> = [
     title: 'CSS 相关',
     item: [
       {
-        icon: 'https://sass-lang.com/assets/img/logos/logo-b6e1ef6e.svg',
+        icon: '/icons/sass.svg',
         title: 'Sass',
         desc: '一个成熟，稳定，功能强大的专业级 CSS 扩展语言',
         link: 'https://sass-lang.com',

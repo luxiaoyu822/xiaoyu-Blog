@@ -2,6 +2,7 @@ import { h } from 'vue'
 import { useData } from 'vitepress'
 import Theme from 'vitepress/theme'
 import './style.scss'
+import TopVisitRecord from '../components/TopVisitRecord.vue';
 
 export default {
   ...Theme,
@@ -13,9 +14,8 @@ export default {
     if (frontmatter.value?.layoutClass) {
       props.class = frontmatter.value.layoutClass
     }
-    return h(Theme.Layout, props, {})
-  },
-  enhanceApp({ app, router, siteData }) {
-    // ...
+    return h(Theme.Layout, props, {
+      'nav-bar-title-after': () => h(TopVisitRecord),
+    })
   },
 }
