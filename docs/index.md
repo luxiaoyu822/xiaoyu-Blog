@@ -14,18 +14,18 @@ hero:
       link: /nav
     - theme: alt
       text: 前端童话
-      link: /f-knowledges/ecma/es6
+      link: /f-knowledge/ecma/es6
 
 features:
   - icon: ⭐
     title: 前端童话
     details: 前端常用知识分享 + 记录<br />待补充中:-* ...<br />如有异议，请以官方文档为准
-    link: /f-knowledges/network/base
+    link: /f-knowledge/network/base
     linkText: 前端童话
   - icon: 📘
     title: 笔记心得
     details: 记录学习过程中的笔记<br />随心记 😄
-    link: /analysis/utils/only-allow
+    link: /notes/raop/myw
     linkText: 源码阅读
   - icon: 💬
     title: 不能说的秘密
