@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import {route} from 'vitepress/'
 </script>
 
 <template>
