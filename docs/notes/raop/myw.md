@@ -13,4 +13,11 @@
 
 - nodejs的版本要求为16或以上
 - 通过命令行接口访问VitePress的终端
-- 支持Markdown语法的文本编辑器（推荐使用VSCode）
+- 支持Markdown语法的文本编辑器（官方推荐使用VSCode）
+
+`本文以在linux mint 20操作系统，和以Webstorm为开发环境为例`
+
+在某个目录下新建一个名称为`my-vitepress`文件夹，然后右键在终端中打开，输入 `npm init`，可以根据提示输入名称，
+也可以回车到底结束引导。随后会创建一个`package.json`文件，接着在终端中输入`npm install -D vitepress`，作用是将
+vitepress安装到开发环境的依赖中。接着在终端中输入`npx vitepress init`，输入后会直接进入vitepress初始引导界面
+
