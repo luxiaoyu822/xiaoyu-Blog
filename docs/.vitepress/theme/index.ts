@@ -2,7 +2,6 @@ import {h} from 'vue'
 import {useData} from 'vitepress'
 import Theme from 'vitepress/theme'
 import './style.scss'
-import  './randomColors'
 import TopVisitRecord from '../components/TopVisitRecord.vue';
 
 export default {

@@ -1,17 +1,11 @@
 :root {
-  --vp-c-brand: var(--vp-c-brand-color);
-  --vp-c-brand-light: var(--vp-c-brand-light-color);
-  --vp-c-brand-lighter: var(--vp-c-brand-lighter-color);
-  --vp-c-brand-lightest: var(--vp-c-brand-lightest-color);
-  --vp-c-brand-dark: var(--vp-c-brand-dark-color);
-  --vp-c-brand-darker: var(--vp-c-brand-darker-color);
-  --vp-c-brand-dimm: var(--vp-c-brand-dimm-color);
-  --webkit-linear-gradient-color-2: var(webkit-linear-gradient-color-2);
-  --webkit-linear-gradient-color-3: var(webkit-linear-gradient-color-3);
-  --linear-gradient-color-2: var(linear-gradient-color-2);
-  --linear-gradient-color-3: var(linear-gradient-color-3);
-  animation-name: color-transition;
-  animation-duration: 1s;
+  --vp-c-brand: #646cff;
+  --vp-c-brand-light: #747bff;
+  --vp-c-brand-lighter: #9499ff;
+  --vp-c-brand-lightest: #bcc0ff;
+  --vp-c-brand-dark: #535bf2;
+  --vp-c-brand-darker: #454ce1;
+  --vp-c-brand-dimm: rgba(100, 108, 255, 0.08);
 }
 
 :root {
@@ -28,8 +22,8 @@
 
 :root {
   --vp-home-hero-name-color: transparent;
-  --vp-home-hero-name-background: -webkit-linear-gradient(120deg, var(--webkit-linear-gradient-color-2), var(--webkit-linear-gradient-color-3));
-  --vp-home-hero-image-background-image: linear-gradient(-45deg, var(--linear-gradient-color-2), var(--linear-gradient-color-3));
+  --vp-home-hero-name-background: -webkit-linear-gradient(120deg, #bd34fe 30%, #41d1ff);
+  --vp-home-hero-image-background-image: linear-gradient(-45deg, #bd34fe 50%, #47caff 50%);
   --vp-home-hero-image-filter: blur(40px);
 }
 
