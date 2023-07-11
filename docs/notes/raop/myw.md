@@ -128,7 +128,7 @@ nginx 安装成功后，需要将本地打包的 dist 文件上传到云服务�
 这里以scp为例，新建终端并输入以下命令：
 
 ```shell
-sudo scp /path/local/file username@remote_ip:/path/remote/directory
+scp -r /path/local/file username@remote_ip:/path/remote/directory
 ```
 - `/path/to/local/file`：本地文件的路径和名称。
 - `username`：远程服务器的用户名。
