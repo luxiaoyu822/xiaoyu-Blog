@@ -156,6 +156,7 @@ sudo nano nginx.conf
            root   /var/www/dist;
            try_files $uri $uri/ /index.html;
            index  index.html;
+        }
     }
 ```
 - `listen` : 表示监听的端口号
