@@ -28,11 +28,11 @@ jobs:
         uses: easingthemes/ssh-deploy@v4.1.8
         with:
           # Private key part of an SSH key pair
-          SSH_PRIVATE_KEY: ${{secret.PRIVATE_KEY}}
+          SSH_PRIVATE_KEY: ${{secrets.PRIVATE_KEY}}
           # Remote host
-          REMOTE_HOST: ${{secret.REMOTE_HOST}} 
+          REMOTE_HOST: ${{secrets.REMOTE_HOST}} 
           # Remote user
-          REMOTE_USER: ${{secret.REMOTE_USERNAME}}
+          REMOTE_USER: ${{secrets.REMOTE_USERNAME}}
           # Source directory, path relative to `$GITHUB_WORKSPACE` root, eg: `dist/`
           SOURCE: 'dist'
           # Target directory
