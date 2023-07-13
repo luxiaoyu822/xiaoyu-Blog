@@ -1,0 +1,39 @@
+name: build and deploy
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        
+      - name: Use Node.js 18
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18.x'
+          
+      - name: Build Project
+        run: |
+          npm install
+          npm run build
+          
+      - name: SSH Deploy
+        uses: easingthemes/ssh-deploy@v4.1.8
+        with:
+          # Private key part of an SSH key pair
+          SSH_PRIVATE_KEY: ${{secret.PRIVATE_KEY}}
+          # Remote host
+          REMOTE_HOST: ${{secret.REMOTE_HOST}} 
+          # Remote user
+          REMOTE_USER: ${{secret.REMOTE_USERNAME}}
+          # Source directory, path relative to `$GITHUB_WORKSPACE` root, eg: `dist/`
+          SOURCE: 'dist'
+          # Target directory
+          TARGET: '/home/ubuntu/'
