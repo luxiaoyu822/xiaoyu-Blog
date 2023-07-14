@@ -27,7 +27,7 @@ jobs:
         env:
           SSH_PRIVATE_KEY: ${{secrets.PRIVATE_KEY}}
           ARGS: "-rlgoDzvc -i --delete"
-          SOURCE: '/dist/*'
+          SOURCE: 'dist/*'
           REMOTE_HOST: ${{secrets.REMOTE_HOST}} 
           REMOTE_USER: ${{secrets.REMOTE_USERNAME}}
           TARGET: '/home/ubuntu/dist/'
