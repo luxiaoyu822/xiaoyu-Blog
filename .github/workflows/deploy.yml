@@ -34,3 +34,7 @@ jobs:
           connect_timeout: 10s
           local: './dist/*'
           remote: /home/ubuntu/dist
+        
+      - name: ReRun
+        run: |
+         sudo nginx -s reload
