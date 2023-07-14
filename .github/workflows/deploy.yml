@@ -23,15 +23,11 @@ jobs:
           npm run build
           
       - name: SSH Deploy
-        uses: easingthemes/ssh-deploy@v4.1.8
+        uses: easingthemes/ssh-deploy@main
         with:
-          # Private key part of an SSH key pair
           SSH_PRIVATE_KEY: ${{secrets.PRIVATE_KEY}}
-          # Remote host
-          REMOTE_HOST: ${{secrets.REMOTE_HOST}} 
-          # Remote user
-          REMOTE_USER: ${{secrets.REMOTE_USERNAME}}
-          # Source directory, path relative to `$GITHUB_WORKSPACE` root, eg: `dist/`
+          ARGS: "-rlgoDzvc -i --delete"
           SOURCE: '/dist/*'
-          # Target directory
-          TARGET: '/home/ubuntu/dist'
+          REMOTE_HOST: ${{secrets.REMOTE_HOST}} 
+          REMOTE_USER: ${{secrets.REMOTE_USERNAME}}
+          TARGET: '/home/ubuntu/dist/'
