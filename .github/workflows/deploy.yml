@@ -1,0 +1,33 @@
+name: build and deploy
+
+on:
+  push:
+    branches: [ "master" ]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        
+      - name: Use Node.js 18
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18.x'
+          
+      - name: Build Project
+        run: |
+          npm install
+          npm run build
+          
+      - name: ssh-scp-deploy
+        uses: marcodallasanta/ssh-scp-deploy@v1.2.0
+        with:
+          local: ./dist/
+          remote: /home/ubuntu/dist
+          host: ${{ secrets.REMOTE_HOST }}
+          user: ${{ secrets.REMOTE_USERNAME }}
+          key: ${{ secrets.PRIVATE_KEY }}
+          post_upload: sudo nginx -s reload
