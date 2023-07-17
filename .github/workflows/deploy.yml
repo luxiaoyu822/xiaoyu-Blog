@@ -25,7 +25,7 @@ jobs:
       - name: ssh-scp-deploy
         uses: marcodallasanta/ssh-scp-deploy@v1.2.0
         with:
-          local: dist/
+          local: docs/.vitepress/dist/
           remote: /home/ubuntu/dist/
           host: ${{ secrets.REMOTE_HOST }}
           user: ${{ secrets.REMOTE_USERNAME }}
