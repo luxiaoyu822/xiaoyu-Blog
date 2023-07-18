@@ -15,6 +15,9 @@ hero:
     - theme: alt
       text: 前端童话
       link: /f-knowledge/ecma/es6
+    - theme: brand
+      text: ChatGPT
+      link: 'https://gpt.lu-xiaoyu.com'
 
 features:
   - icon: ⭐
