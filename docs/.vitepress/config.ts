@@ -15,6 +15,7 @@ export default defineConfig({
     },
     nav: [
       { text: '导航', link: '/nav' },
+      { text: 'ChatGPT', link: 'https://gpt.lu-xiaoyu.com' },
       {
         text: '前端童话',
         items: [

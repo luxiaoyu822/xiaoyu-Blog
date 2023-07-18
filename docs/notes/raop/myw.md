@@ -58,6 +58,7 @@ vitepress安装到开发环境的依赖中。接着在终端中输入`npx vitepr
   ...
 }
 ```
+
 在终端中输入`npm run docs:dev`，在本地开发服务器启动项目，项目初始预览如下：
 
 ![vitepress初始效果预览](./images/vitepress.png)
@@ -86,6 +87,7 @@ vitepress安装到开发环境的依赖中。接着在终端中输入`npx vitepr
 ```shell
 ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 ```
+
 将本地生成的id_rsa.pub文件中的内容放到已有公钥上即可。
 
 密钥绑定完成后，打开终端输入以下命令: 其中`username`为服务器的登录用户名，`IP_HOST`为服务器公网IP
@@ -93,6 +95,7 @@ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 ```shell
 ssh <username>@IP_HOST
 ```
+
 初次登陆需要在提示内容中输入 yes ，将服务器的 ip 添加到本地
 
 ### 安装nginx服务器
@@ -103,6 +106,7 @@ ssh <username>@IP_HOST
 sudo apt update
 sudo apt install nginx
 ```
+
 安装过程中会提示是否继续，输入y继续安装。
 
 完成安装后，使用以下命令启动 nginx 服务器：
@@ -116,6 +120,7 @@ sudo systemctl start nginx
 ```shell
 sudo systemctl status nginx
 ```
+
 如果状态显示为 "active (running)"，则表示 Nginx 已经成功安装并正在运行。
 
 在浏览器中输入服务器的 IP 地址，如果能够显示 nginx 的默认欢迎页面，说明安装成功。
@@ -130,6 +135,7 @@ nginx 安装成功后，需要将本地打包的 dist 文件上传到云服务�
 ```shell
 scp -r /path/local/file username@remote_ip:/path/remote/directory
 ```
+
 - `/path/to/local/file`：本地文件的路径和名称。
 - `username`：远程服务器的用户名。
 - `remote_ip`：远程服务器的 IP 地址或域名。
@@ -138,13 +144,14 @@ scp -r /path/local/file username@remote_ip:/path/remote/directory
 
 ### 修改 nginx 配置
 
-nginx 的配置文件通常位于 `/etc/nginx` 目录下，连接远程服务器后，使用以下命令进入 `/etc/nginx` 
+nginx 的配置文件通常位于 `/etc/nginx` 目录下，连接远程服务器后，使用以下命令进入 `/etc/nginx`
 目录下并编辑 `nginx.conf` 文件：
 
 ```shell
 cd ../../etc/nginx
 sudo nano nginx.conf
 ```
+
 在 `nginx.conf` 文件中的 http 下添加以下内容：
 
 ```
@@ -159,11 +166,12 @@ sudo nano nginx.conf
         }
     }
 ```
+
 - `listen` : 表示监听的端口号
 - `server_name` : 表示监听的地址
 - `root` : 为上传至服务器的打包项目的文件地址
 - `try_files` : 尝试按照给定顺序查找文件。如果请求的文件存在，则直接返回文件内容。如果请求的文
-件不存在，则将请求重定向到 /index.html
+  件不存在，则将请求重定向到 /index.html
 - `index` : 指定默认的索引文件为 index.html
 
 需要将 `nginx.conf` 文件中的以下内容注释：
@@ -172,12 +180,95 @@ sudo nano nginx.conf
 #	include /etc/nginx/conf.d/*.conf;
 #	include /etc/nginx/sites-enabled/*;
 ```
+
 ::: tip
 需要注意 80 端口的配置是否与 nginx 的默认配置有冲突
 :::
 
 更改 `nginx` 配置后，需要在终端中输入以下命令来重新加载 `nginx` 配置 ：
+
 ```shell
 sudo nginx -s reload
 ```
-至此，在浏览器中输入你的服务器的公网 IP ，应该就能看到你的项目了！
+
+至此，在浏览器中输入你的服务器的公网 IP ，应该就能看到你的网站了！
+
+### DNS 域名解析
+
+使用 IP 访问对用户来说是并不友好的，这也是域名出现的原因。在域名提供商（阿里云，腾讯云等）
+购买你想要的域名，并将其绑定至你的云服务器上，就可以通过域名访问你的网站了。
+
+## 自动部署
+
+文章前部分介绍过将项目打包上传至服务器。但对网站来说，可能需要更新维护，每次重复打包上
+传的动作显得费力且无意义。这时便体现了自动部署的优点。
+
+### GitHub Action 自动部署
+
+当你的项目是存放在github上时，GitHub Actions 是一种持续集成和持续交付 (CI/CD) 平台，
+可用于自动执行生成、测试和部署管道。 您可以创建工作流程来构建和测试存储库的每个拉取请求，
+或将合并的拉取请求部署到生产环境。
+
+在你\项目中选择Actions，你可以在Marketplace中选择一个模板，它会自动在项目根目录下创建
+`.github/workflows/main.yml`文件（文件名随意）。也可以在根目录下自行创建。
+![GitHub Action示意图](./images/githubAction.png)
+
+在上传到服务器的过程中，我们会用到服务器的相关信息，此时不能直接写在配置文件中，
+会暴露我们的信息，这时就可以将将服务器的信息配置在 Actions secrets，在文件中
+使用即可。
+
+![GitHub Action示意图](./images/githubActionsecret.png)
+`yml`文件内容如下：
+```yml
+#工作流的名称
+name: build and deploy
+
+#触发工作流的事件
+on:
+  push:
+    branches: [ "master" ]
+
+jobs:
+  build-and-deploy:
+    #运行在Ubuntu最新版的镜像上运行
+    runs-on: ubuntu-latest
+
+    steps:
+        #检查并拉取代码
+      - name: Checkout
+        uses: actions/checkout@v3
+        
+        #设置环境为nodejs 18
+      - name: Use Node.js 18
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18.x'
+          
+        #安装模块并打包项目 
+      - name: Build Project
+        run: |
+          npm install
+          npm run build
+        
+        #将文件上传至云服务器  
+      - name: ssh-scp-deploy
+        uses: marcodallasanta/ssh-scp-deploy@v1.2.0
+        with:
+          #本地打包后的文件目录
+          local: docs/.vitepress/dist
+          #上传至远程服务器的目标目录
+          remote: /home/ubuntu/
+          #远程服务器的地址
+          host: ${{ secrets.REMOTE_HOST }}
+          #远程服务器的用户名
+          user: ${{ secrets.REMOTE_USERNAME }}
+          #远程服务器的密钥（与密码二者选其一）
+          key: ${{ secrets.PRIVATE_KEY }}
+          #上传后执行的脚本
+          post_upload: sudo nginx -s reload
+```
+
+配置好自动部署后，以后我们每次合并代码到 master 分支时，都会帮我们自动上传到云服务器，
+并重启nginx服务
+
+
