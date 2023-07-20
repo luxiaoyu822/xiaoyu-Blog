@@ -9,8 +9,8 @@ lastUpdated: false
 ```
 
 ### About
-- [xiaoyu's Blog]()   基于vitepress构建的个人网站
-- [随心记]()   日常博客文章分享
+- [xiaoyu's Blog](https://www.lu-xiaoyu.com)   基于vitepress构建的个人网站
+- [随心记](/notes/raop/myw)   日常博客文章分享
 - [新闻管理系统](https://github.com/luxiaoyu822/node-news-server#readme)   基于express+Vue+mongodb的项目练习
 
 ### Contact Me

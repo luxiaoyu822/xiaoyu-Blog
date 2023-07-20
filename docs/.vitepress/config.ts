@@ -98,8 +98,7 @@ export default defineConfig({
     },
     socialLinks: [{ icon: 'github', link: 'https://github.com/luxiaoyu822' }],
     footer: {
-      message: 'Released under the MIT License.',
-      copyright: 'Copyright © 2023-present luxiaoyu',
+      message: 'Released under the MIT License.<br><a href="https://beian.miit.gov.cn/" target="_blank">皖ICP备2023012132号-1</a>',
     },
     lastUpdatedText: '上次更新',
     darkModeSwitchLabel:'外观主题',
