@@ -56,16 +56,19 @@ export default defineConfig({
         {
           text: 'CSS 相关知识',
           collapsed: true,
-          items: [{ text: 'CSS 入门', link: '/f-knowledge/css/started' }],
+          items: [
+              { text: 'CSS 入门', link: '/f-knowledge/css/started' },
+              { text: '伪类和伪元素', link: '/f-knowledge/css/pseudo' },
+          ],
         },
         {
           text: 'JavaScript 相关知识',
           collapsed: true,
           items: [
-            {
-              text: 'JavaScript 入门',
-              link: '/f-knowledge/javascript/started',
-            },
+            {text: 'JavaScript 入门', link: '/f-knowledge/javascript/started'},
+            {text: '递归函数', link: '/f-knowledge/javascript/recursion'},
+            {text: '正则表达式', link: '/f-knowledge/javascript/regexp'},
+            {text: 'JavaScript 常用方法', link: '/f-knowledge/javascript/common-method'},
           ],
         },
         {
