@@ -102,15 +102,10 @@ export default defineConfig({
     socialLinks: [{ icon: 'github', link: 'https://github.com/luxiaoyu822' }],
     footer: {
       message:
-       `Released under the MIT License.
-        <br>
-        <a href="https://beian.miit.gov.cn/" target="_blank">皖ICP备2023012132号-1</a>
-        <br>
-        <div style="display: flex;justify-content: center;align-items: center;">
-		 		  <a target="_blank" style="display:flex;justify-content: center;align-items: center;" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32011302321556">
-            <img style="width:18px;height:18px" src="/gongan.png"/><p>苏公网安备 32011302321556号</p>
-          </a>
-        </div>
+      `<a href="https://beian.miit.gov.cn/" target="_blank">皖ICP备2023012132号-1</a>
+       <a target="_blank" style="display:flex;justify-content: center;align-items: center;" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32011302321556">
+          <img style="width:18px;height:18px" src="/gongan.png"/>苏公网安备 32011302321556号
+       </a>
       `,
     },
     lastUpdatedText: '上次更新',
