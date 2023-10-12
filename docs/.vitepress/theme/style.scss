@@ -8,6 +8,10 @@
   animation: rainbow 15s linear infinite;
 }
 
+.vp-doc a{
+  text-decoration: none!important;
+}
+
 :root {
   --vp-button-brand-border: var(--vp-c-brand-light);
   --vp-button-brand-text: var(--vp-c-white);
